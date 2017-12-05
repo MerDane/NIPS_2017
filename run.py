@@ -56,6 +56,18 @@ html = str(np.load('html.npy'))
 paper_list = get_list(html)
 #print(len(paper_list))
 #write_downland_links(paper_list)
-for data in len(paper_list):
+l = []
+for i in range(len(paper_list)):
     info = "|"
+    info += str(i+1)
+    info += '|'
+    info += '[' + paper_list[i][1] + ']'
+    info += '(' + paper_list[i][0] + ')'
+    info += '|'
+    info += paper_list[i][2]
+    info += '|' + '\n'
+    l.append(info)
+f = open('table.txt','w+')
+f.writelines(l)
+f.close()
 
