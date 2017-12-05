@@ -54,5 +54,8 @@ def write_downland_links(paper_list):
 #get_html()
 html = str(np.load('html.npy'))
 paper_list = get_list(html)
-print(len(paper_list))
-write_downland_links(paper_list)
+#print(len(paper_list))
+#write_downland_links(paper_list)
+for data in len(paper_list):
+    info = "|"
+
